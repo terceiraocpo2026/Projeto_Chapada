@@ -6,8 +6,8 @@ if (!document.querySelector('.lightbox')) {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background: rgba(0, 0, 0, 0.85);
         justify-content: center;
         align-items: center;
@@ -23,7 +23,7 @@ if (!document.querySelector('.lightbox')) {
     `;
 
     lightbox.appendChild(lightboxImg);
-    document.body.appendChild(lightbox);
+    document.documentElement.appendChild(lightbox);
 
     let ampliado = false;
 
