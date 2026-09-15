@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+.logo-insta1,
+.logo-insta2 {
+    position: relative;
+    z-index: 20;
+}
+
 /* ===== BODY / TRANSIÇÃO DE PÁGINA ===== */
 body {
     font-family: Arial, sans-serif;
