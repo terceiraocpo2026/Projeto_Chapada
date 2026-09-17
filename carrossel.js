@@ -30,11 +30,7 @@ function atualizar() {
         if (diff > total / 2) diff -= total;
         if (diff < -total / 2) diff += total;
 
-        if (Math.abs(diff) > 2) {
-            item.dataset.pos = 'hidden';
-        } else {
-            item.dataset.pos = diff;
-        }
+        item.dataset.pos = diff;
     });
 
     bolinhas.forEach((b, i) => b.classList.toggle('ativo', i === atual));

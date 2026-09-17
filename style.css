@@ -11,10 +11,15 @@
     z-index: 20;
 }
 
+@font-face {
+    font-family: 'Relationship Of Melodrame';
+    src: url('Relationshipofmélodrame.ttf') format('truetype');
+}
+
 /* ===== BODY / TRANSIÇÃO DE PÁGINA ===== */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #7A1F3D;
+    font-family: 'Relationship Of Melodrame', Arial, sans-serif;
+    background-color: #53161D;
     color: #faf7f7;
     opacity: 0;
     animation: fadeIn 0.4s ease forwards;
@@ -169,6 +174,20 @@ header {
     transform: translate(110%, -50%) scale(0.5);
     z-index: 2;
     opacity: 0.35;
+}
+
+.item[data-pos="-3"] {
+    transform: translate(-280%, -50%) scale(0.35);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.item[data-pos="3"] {
+    transform: translate(180%, -50%) scale(0.35);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .seta {
