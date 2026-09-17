@@ -73,6 +73,41 @@ header {
     height: 120px;
 }
 
+/* ===== MENU HAMBÚRGUER (escondido no desktop, só aparece no mobile) ===== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #faf7f7;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.ativo span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle.ativo span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.ativo span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
 /* ===== CARROSSEL DE LOCAIS ===== */
 .carossel-locais {
     padding: 30px 20px;
@@ -370,6 +405,10 @@ footer {
     margin-top: 4px;
 }
 
+.titulo-mobile {
+    display: none;
+}
+
 /* ===== RESPONSIVO — TABLET / CELULAR GRANDE (768px) ===== */
 @media (max-width: 768px) {
     #menu {
@@ -383,15 +422,35 @@ footer {
         flex-shrink: 0;
     }
 
+    .menu-toggle {
+        display: flex;
+        order: 2;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+    }
+
     .nav ul {
+        display: none;
         gap: 8px;
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav.ativo ul {
+        display: flex;
     }
 
     .nav ul li a {
-        font-size: 14px;
-        padding: 8px 22px;
+        display: block;
+        font-size: 26px;
+        padding: 12px 28px;
         background-color: rgba(250, 247, 247, 0.12);
         border-radius: 6px;
     }
@@ -455,6 +514,20 @@ footer {
         max-width: none;
         width: 380px;
     }
+
+    .logo-insta2 {
+        display: none;
+    }
+
+    .titulo-mobile {
+        display: block;
+        font-size: 16px;
+        color: #faf7f7;
+        order: 1;
+        white-space: nowrap;
+        margin-top: 8px;
+    }
+
 }
 
 /* ===== RESPONSIVO — CELULAR PEQUENO (480px) ===== */
@@ -481,8 +554,8 @@ footer {
     }
 
     .nav ul li a {
-        padding: 6px 20px;
-        font-size: 12px;
+        padding: 10px 26px;
+        font-size: 26px;
         border: solid 1px #000;
     }
 
@@ -524,5 +597,18 @@ footer {
     .foto-turma {
         max-width: none;
         width: 380px;
+    }
+
+    .logo-insta2 {
+        display: none;
+    }
+
+    .titulo-mobile {
+        display: block;
+        font-size: 16px;
+        color: #faf7f7;
+        order: 1;
+        white-space: nowrap;
+        margin-top: 8px;
     }
 }
