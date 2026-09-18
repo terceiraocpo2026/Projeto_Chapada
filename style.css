@@ -19,8 +19,8 @@
 /* ===== BODY / TRANSIÇÃO DE PÁGINA ===== */
 body {
     font-family: 'Relationship Of Melodrame', Arial, sans-serif;
-    background-color: #53161D;
-    color: #faf7f7;
+    background-color: #FFFBF0;
+    color: #56161D;
     opacity: 0;
     animation: fadeIn 0.4s ease forwards;
 }
@@ -42,7 +42,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #7A1F3D;
+    background-color: #56161D;
     padding: 10px 20px;
 }
 
@@ -59,7 +59,7 @@ header {
 
 .nav ul li a {
     text-decoration: none;
-    color: #faf7f7;
+    color: #FFFBF0;
     font-weight: bold;
     padding: 5px 10px;
     transition: background-color 0.3s, color 0.3s;
@@ -226,8 +226,8 @@ header {
 }
 
 .seta {
-    background: #faf7f7;
-    color: #7A1F3D;
+    background: #56161D;
+    color: #FFFBF0;
     border: none;
     width: 44px;
     height: 44px;
@@ -263,7 +263,7 @@ header {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #faf7f7;
+    background: #56161D;
     opacity: 0.4;
     cursor: pointer;
     transition: opacity 0.3s, transform 0.3s;
@@ -305,6 +305,8 @@ header {
     font-weight: bold;
     border-radius: 6px;
     transition: background-color 0.3s, transform 0.3s;
+    border-color: #56161D;
+    border: 2px solid;
 }
 
 .btn-projeto:hover {
@@ -315,6 +317,8 @@ header {
 /* ===== FOTO + DESCRIÇÃO / FOTO DA TURMA ===== */
 .foto-descricao {
     margin-left: 10px;
+    justify-content: center;
+    justify-items: center;
 }
 
 .foto-turma {
@@ -365,7 +369,7 @@ header {
 
 /* ===== FOOTER ===== */
 footer {
-    background-color: #5a1730;
+    background-color: #56161D;
     padding: 30px 20px;
     margin-top: 40px;
     border-top: 2px solid rgba(250, 247, 247, 0.15);
@@ -516,7 +520,6 @@ footer {
     }
 
     .logo-insta2 {
-        display: none;
     }
 
     .titulo-mobile {
@@ -600,7 +603,6 @@ footer {
     }
 
     .logo-insta2 {
-        display: none;
     }
 
     .titulo-mobile {

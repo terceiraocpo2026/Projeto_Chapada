@@ -2,7 +2,22 @@ const track = document.getElementById('carrosselTrack');
 const itens = Array.from(track.children);
 const indicadoresBox = document.getElementById('indicadores');
 const total = itens.length;
-let atual = Number(sessionStorage.getItem('carrosselPos')) || 0;
+
+// Descobre o nome do arquivo da página atual
+const paginaAtual = window.location.pathname.split('/').pop();
+
+// Procura, entre os itens do carrossel, qual tem o href que bate com a página atual
+const indiceDaPagina = itens.findIndex(item => {
+    const href = item.getAttribute('href');
+    return href && href.split('/').pop() === paginaAtual;
+});
+
+// Se a página atual corresponde a um item do carrossel, usa esse índice.
+// Caso contrário (ex: carrossel na home), cai no sessionStorage como fallback.
+let atual = indiceDaPagina !== -1
+    ? indiceDaPagina
+    : (Number(sessionStorage.getItem('carrosselPos')) || 0);
+
 let autoplay;
 
 itens.forEach((item, i) => {
