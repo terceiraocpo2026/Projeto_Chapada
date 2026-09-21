@@ -33,6 +33,60 @@ body {
     to { opacity: 0; }
 }
 
+
+/* ===== TIPOGRAFIA — TÍTULOS E PARÁGRAFOS ===== */
+
+.secao {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.titulo1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #56161D;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.titulo2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #56161D;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #56161D;
+    width: fit-content;
+}
+
+.titulo3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #56161D;
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.texto {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #56161D;
+    max-width: 700px;
+    margin-bottom: 16px;
+    font-family: bold;
+}
+
+.secao-botao {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+}
+
 /* ===== HEADER / NAV ===== */
 header {
     border-bottom: 2px solid rgba(250, 247, 247, 0.15);
